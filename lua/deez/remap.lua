@@ -34,3 +34,8 @@ vim.keymap.set("n", "<C-/>", function() return check() end, {expr = true, norema
 
 vim.keymap.set("n", "<leader>c", ":!cargo run<CR>")
 vim.keymap.set("n", "<leader>wc", ":w !cargo run<CR>")
+
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>");
+vim.keymap.set("n", "<leader>ts", ":tab split<CR>");
+vim.keymap.set("n", "<C-}>", ":tabnext<CR>");
+vim.keymap.set("n", "<C-{>", ":tabp<CR>");
