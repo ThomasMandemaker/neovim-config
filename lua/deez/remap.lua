@@ -39,3 +39,5 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>");
 vim.keymap.set("n", "<leader>ts", ":tab split<CR>");
 vim.keymap.set("n", "<C-}>", ":tabnext<CR>");
 vim.keymap.set("n", "<C-{>", ":tabp<CR>");
+
+vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
