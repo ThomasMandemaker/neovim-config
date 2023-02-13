@@ -29,15 +29,22 @@ local function check()
     end
 end
 
+-- Very baasic auto comment
 vim.keymap.set("v", "<C-/>", function() return check() end, {expr = true, noremap = false})
 vim.keymap.set("n", "<C-/>", function() return check() end, {expr = true, noremap = false})
 
+-- Run cargo build
 vim.keymap.set("n", "<leader>c", ":!cargo run<CR>")
 vim.keymap.set("n", "<leader>wc", ":w !cargo run<CR>")
 
+-- Tab navigation
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>");
 vim.keymap.set("n", "<leader>ts", ":tab split<CR>");
 vim.keymap.set("n", "<C-}>", ":tabnext<CR>");
 vim.keymap.set("n", "<C-{>", ":tabp<CR>");
 
+-- Only show messages on ERROR
 vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
+
+-- LSP remap
+vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
