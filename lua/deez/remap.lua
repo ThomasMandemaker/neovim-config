@@ -38,7 +38,6 @@ vim.keymap.set("n", "<C-/>", function() return check() end, {expr = true, norema
 vim.keymap.set("n", "<leader>c", ":!cargo run<CR>")
 vim.keymap.set("n", "<leader>wc", ":w !cargo run<CR>")
 
-<<<<<<< Updated upstream
 -- Tab navigation
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>");
 vim.keymap.set("n", "<leader>ts", ":tab split<CR>");
@@ -50,14 +49,7 @@ vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
 
 -- LSP remap
 vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
-=======
-vim.keymap.set("n", "<leader>tn", ":tabnew<CR>")
-vim.keymap.set("n", "<leader>ts", ":tab split<CR>")
-vim.keymap.set("n", "<C-}>", ":tabnext<CR>")
-vim.keymap.set("n", "<C-{>", ":tabp<CR>")
 
 vim.keymap.set("n", "<leader>o", "o<C-[>k")
 vim.keymap.set("n", "<leader>O", "O<C-[>j")
-vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
 
->>>>>>> Stashed changes
