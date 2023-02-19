@@ -20,9 +20,10 @@ vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz")
 
 local function check()
     local char = vim.api.nvim_get_current_line()
-    local bruh = string.sub(char, 0, 2)
+
+    local bruh = string.match(char, '//')
     print(bruh)
-    if string.find(bruh, '/') == nill then
+    if bruh == nill then
         return "^<C-v>I//<Esc>"
     else
         return "^<C-v>ld<Esc>"
@@ -37,6 +38,7 @@ vim.keymap.set("n", "<C-/>", function() return check() end, {expr = true, norema
 vim.keymap.set("n", "<leader>c", ":!cargo run<CR>")
 vim.keymap.set("n", "<leader>wc", ":w !cargo run<CR>")
 
+<<<<<<< Updated upstream
 -- Tab navigation
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>");
 vim.keymap.set("n", "<leader>ts", ":tab split<CR>");
@@ -48,3 +50,14 @@ vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
 
 -- LSP remap
 vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
+=======
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>ts", ":tab split<CR>")
+vim.keymap.set("n", "<C-}>", ":tabnext<CR>")
+vim.keymap.set("n", "<C-{>", ":tabp<CR>")
+
+vim.keymap.set("n", "<leader>o", "o<C-[>k")
+vim.keymap.set("n", "<leader>O", "O<C-[>j")
+vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
+
+>>>>>>> Stashed changes

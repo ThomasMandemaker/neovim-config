@@ -23,3 +23,5 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.setup()
+
+vim.diagnostic.config({virtual_text={severity=vim.diagnostic.severity.ERROR}})
